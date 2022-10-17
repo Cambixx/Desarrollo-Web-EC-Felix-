@@ -44,7 +44,7 @@ function validacion() {
         }
     }
 
-    if (!ingredientes.checked) {
+    if (!marcado) {
         alert('[ERROR] Debes elegir al menos 1 ingrediente');
         return false;
     } 
