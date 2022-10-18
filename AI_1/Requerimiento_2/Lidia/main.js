@@ -37,9 +37,11 @@ function validacion() {
 
     ingredientes = document.getElementsByName("ingredientes");
     var marcado = false;
+    var precioIngredientes = 0
     for(var i=0; i<ingredientes.length; i++) {
-        if(ingredientes[i].checked) {
+        while(ingredientes[i].checked) {
             marcado = true;
+            precioIngredientes ++
             break;
         }
     }
@@ -49,7 +51,23 @@ function validacion() {
         return false;
     } 
 
-    alert("Pedimos la pizza!")
+    // Calcular precio
+
+    var precioTamano = 0
+
+    if(document.getElementById("tamaño_pequeña").checked){
+        precioTamano=5
+    }else if (document.getElementById("tamaño_mediana").checked){
+        precioTamano=10
+    }else if (document.getElementById("tamaño_grande").checked){
+       precioTamano=15 
+    }
+
+    var precio = precioTamano + precioIngredientes
+
+    // Mostrar mensaje
+
+    alert("Tu pedido cuesta: " + precio + "€")
     return true;
 }
 
