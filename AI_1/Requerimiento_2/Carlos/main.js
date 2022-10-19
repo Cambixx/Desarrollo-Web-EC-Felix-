@@ -102,7 +102,7 @@ function validacion() {
     var precio = precioTamano + precioIngredientes
 
     // Mostrar mensaje
-    console.log(totalIngredientes)
+    
     alert("Gracias!! "+ nCliente +"\n Tu pedido: " + "\n Pizza: " + tamano + "\n Ingredientes: " + totalIngredientes + "\n Total: " + precio + "€")
     return true;
 }
