@@ -10,7 +10,7 @@ function validacion() {
 
         setTimeout( function(){
             mensaje.textContent = ''
-        }, 3000)
+        }, 2500)
         return false;
     }else nCliente = nombre.value
 
@@ -20,7 +20,7 @@ function validacion() {
 
         setTimeout( function(){
             mensaje.textContent = ''
-        }, 3000)
+        }, 2500)
         return false;
     }
 
@@ -30,7 +30,7 @@ function validacion() {
 
         setTimeout( function(){
             mensaje.textContent = ''
-        }, 3000)
+        }, 2500)
         return false;
     }
 
@@ -40,7 +40,7 @@ function validacion() {
 
         setTimeout( function(){
             mensaje.textContent = ''
-        }, 3000)
+        }, 2500)
         return false;
     }
     
@@ -60,7 +60,7 @@ function validacion() {
 
         setTimeout( function(){
             mensaje.textContent = ''
-        }, 3000)
+        }, 2500)
         return false;
     }
 
