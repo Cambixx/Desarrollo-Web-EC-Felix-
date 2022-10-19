@@ -3,6 +3,7 @@
 function validacion() {
     console.log("Validando los datos del formulario...")
 
+    let nCliente
     if (nombre.value == "") {
         let mensaje = document.getElementById('mensajeNombre')
         mensaje.textContent = 'El campo debe estar relleno'
@@ -11,7 +12,7 @@ function validacion() {
             mensaje.textContent = ''
         }, 3000)
         return false;
-    }
+    }else nCliente = nombre.value
 
     if (direccion.value == "") {
         let mensaje = document.getElementById('mensajeDireccion')
@@ -43,11 +44,12 @@ function validacion() {
         return false;
     }
     
-    tamano = document.getElementsByName("tamano");
+    let tamano = document.getElementsByName("tamano");
     var seleccionado = false;
     for(var i=0; i<tamano.length; i++) {
         if(tamano[i].checked) {
             seleccionado = true;
+            tamano = tamano[i].value
             break;
         }
     }
@@ -65,10 +67,12 @@ function validacion() {
     ingredientes = document.getElementsByName("ingredientes");
     var marcado = false;
     var precioIngredientes = 0
+    totalIngredientes = []
     for(var i=0; i<ingredientes.length; i++) {
         while(ingredientes[i].checked) {
             marcado = true;
             precioIngredientes ++
+            totalIngredientes.push(ingredientes[i].value)
             break;
         }
     }
@@ -98,8 +102,8 @@ function validacion() {
     var precio = precioTamano + precioIngredientes
 
     // Mostrar mensaje
-    
-    alert("Tu pedido cuesta: " + precio + "€")
+    console.log(totalIngredientes)
+    alert("Gracias!! "+ nCliente +"\n Tu pedido: " + "\n Pizza: " + tamano + "\n Ingredientes: " + totalIngredientes + "\n Total: " + precio + "€")
     return true;
 }
 
