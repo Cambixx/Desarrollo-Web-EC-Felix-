@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form id="formulario" action="">
+        <h1>Pedir una pizza</h1>
+
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+        <span id="mensajeNombre"></span>
+        <br>
+        <br>
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" name="direccion" placeholder="Dirección">
+        <span id="mensajeDireccion"></span>
+        <br>
+        <br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+        <span id="mensajeTelefono"></span>
+        <br>
+        <br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Email">
+        <span id="mensajeEmail"></span>
+        <br>
+        <br>
+
+        <label for="tamano">Tamaño pizza:</label><br>
+
+        <input type="radio" value="pequeña" name="tamano" id="tamaño_pequeña"/>Pequeña<br>
+        <input type="radio" value="mediana" name="tamano" id="tamaño_mediana"/>Mediana<br>
+        <input type="radio" value="grande" name="tamano" id="tamaño_grande"/>Grande
+        <br>
+        <span id="mensajeTamano"></span>
+        <br>
+        <br>
+
+        <label for="ingredientes">Ingredientes:</label><br>
+        <input type="checkbox" id="ingrediente1" name="ingredientes" value="Queso">Queso<br>
+        <input type="checkbox" id="ingrediente2" name="ingredientes" value="Oregano">Orégano<br>
+        <input type="checkbox" id="ingrediente3" name="ingredientes" value="Tomate">Tomate<br>
+        <input type="checkbox" id="ingrediente4" name="ingredientes" value="Champiñones">Champiñones<br>
+        <input type="checkbox" id="ingrediente5" name="ingredientes" value="Bacon">Bacon<br>
+        <input type="checkbox" id="ingrediente6" name="ingredientes" value="Piña">Piña
+        <br>
+        <span id="mensajeIngredientes"></span>
+        <br>
+        <br>
+
+        <input type="submit" value="Pedir pizza">
+
+    </form>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
