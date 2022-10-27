@@ -11,40 +11,63 @@
 
 <body>
 
-    <form id="formulario" action="URL">
+    <form id="formulario" action="#">
         <h1>Pedir una pizza</h1>
+
+        <h2 for="ingredientes">Datos de contacto:</h2>
 
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+        <span class="mensaje-error" id="mensajeNombre"></span>
         <br>
 
         <label for="direccion">Dirección:</label><br>
         <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br>
+        <span class="mensaje-error" id="mensajeDireccion"></span>
         <br>
 
         <label for="telefono">Teléfono:</label><br>
         <input type="tel" id="telefono" name="telefono" placeholder="Teléfono"><br>
+        <span class="mensaje-error" id="mensajeTelefono"></span>
         <br>
 
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" placeholder="Email"><br>
+        <span class="mensaje-error" id="mensajeEmail"></span>
         <br>
 
-        <label for="tamano">Tamaño pizza:</label><br>
+        <h2 for="tamano">Tamaño pizza:</h2>
 
-        <input type="radio" value="pequeña" name="tamano" id="tamaño_pequeña"/>Pequeña<br>
-        <input type="radio" value="mediana" name="tamano" id="tamaño_mediana"/>Mediana<br>
-        <input type="radio" value="grande" name="tamano" id="tamaño_grande"/>Grande<br>
-        <br>
+        <input type="radio" value="pequeña" name="tamano" id="tamaño_pequeña">
+        <label for="tamaño_pequeña">Pequeña</label><br>
+
+        <input type="radio" value="mediana" name="tamano" id="tamaño_mediana">
+        <label for="tamaño_mediana">Mediana</label><br>
+
+        <input type="radio" value="grande" name="tamano" id="tamaño_grande">
+        <label for="tamaño_grande">Grande</label><br>
+        <span class="mensaje-error" id="mensajeTamano"></span>
         <br>
 
-        <label for="ingredientes">Ingredientes:</label><br>
-        <input type="checkbox" id="ingrediente1" name="ingredientes" value="Queso">Queso<br>
-        <input type="checkbox" id="ingrediente2" name="ingredientes" value="Oregano">Orégano<br>
-        <input type="checkbox" id="ingrediente3" name="ingredientes" value="Tomate">Tomate<br>
-        <input type="checkbox" id="ingrediente4" name="ingredientes" value="Champiñones">Champiñones<br>
-        <input type="checkbox" id="ingrediente5" name="ingredientes" value="Bacon">Bacon<br>
-        <input type="checkbox" id="ingrediente6" name="ingredientes" value="Piña">Piña<br>
+        <h2 for="ingredientes">Ingredientes:</h2>
+        <input type="checkbox" id="ingrediente1" name="ingredientes" value="Queso">
+        <label for="ingrediente1">Queso</label><br>
+
+        <input type="checkbox" id="ingrediente2" name="ingredientes" value="Oregano">
+        <label for="ingrediente2">Orégano</label><br>
+
+        <input type="checkbox" id="ingrediente3" name="ingredientes" value="Tomate">
+        <label for="ingrediente3">Tomate</label><br>
+
+        <input type="checkbox" id="ingrediente4" name="ingredientes" value="Champiñones">
+        <label for="ingrediente4">Champiñones</label><br>
+
+        <input type="checkbox" id="ingrediente5" name="ingredientes" value="Bacon">
+        <label for="ingrediente5">Bacon</label><br>
+
+        <input type="checkbox" id="ingrediente6" name="ingredientes" value="Piña">
+        <label for="ingrediente6">Piña</label><br>
+        <span class="mensaje-error" id="mensajeIngredientes"></span>
         <br>
 
         <input type="submit" value="Pedir pizza">
