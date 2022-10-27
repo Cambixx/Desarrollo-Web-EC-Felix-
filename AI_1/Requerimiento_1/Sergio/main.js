@@ -88,17 +88,17 @@ function meterInputs(){
 }
 
 function meterRadio(){
-    creaRadio(formulario, 'pizza', 'pizza')
-    creaRadio(formulario, 'burger', 'burger')
-    creaRadio(formulario, 'pasta', 'pasta')
-    creaRadio(formulario, 'queso', 'queso')
+    creaRadio(formulario, 'comida', 'pizza')
+    creaRadio(formulario, 'comida', 'burger')
+    creaRadio(formulario, 'comida', 'pasta')
+    creaRadio(formulario, 'comida', 'queso')
 }
 
 function meterRadio2(){
-    creaRadio2(formulario, 'Interstellar', 'Interestellar')
-    creaRadio2(formulario, 'Pulp fiction', 'Pulp fiction')
-    creaRadio2(formulario, 'El caballero oscuro', 'El caballero Oscuro')
-    creaRadio2(formulario, 'Origen', 'Origen')
+    creaRadio2(formulario, 'pelicula', 'Interestellar')
+    creaRadio2(formulario, 'pelicula', 'Pulp fiction')
+    creaRadio2(formulario, 'pelicula', 'El caballero Oscuro')
+    creaRadio2(formulario, 'pelicula', 'Origen')
 }
 
 function crearCheck(v, texto){
