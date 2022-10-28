@@ -1,53 +1,89 @@
+
+
 function validacion() {
     console.log("Validando los datos del formulario...")
 
-    if (nombre.value.trim() == "") {
-        alert('[ERROR] El campo Nombre debe de estar relleno');
+    let nCliente
+    if (nombre.value == "") {
+        let mensaje = document.getElementById('mensajeNombre')
+        mensaje.textContent = 'El campo debe estar relleno'
+
+        setTimeout( function(){
+            mensaje.textContent = ''
+        }, 2500)
+        return false;
+    }else nCliente = nombre.value
+
+    if (direccion.value == "") {
+        let mensaje = document.getElementById('mensajeDireccion')
+        mensaje.textContent = 'El campo debe estar relleno'
+
+        setTimeout( function(){
+            mensaje.textContent = ''
+        }, 2500)
         return false;
     }
 
-    if (direccion.value.trim() == "") {
-        alert('[ERROR] El campo Dirección debe de estar relleno');
+    if (telefono.value == "") {
+        let mensaje = document.getElementById('mensajeTelefono')
+        mensaje.textContent = 'El campo debe estar relleno'
+
+        setTimeout( function(){
+            mensaje.textContent = ''
+        }, 2500)
         return false;
     }
 
-    if (telefono.value.trim() == "") {
-        alert('[ERROR] El campo Teléfono debe de estar relleno');
-        return false;
-    }
+    if (email.value == "") {
+        let mensaje = document.getElementById('mensajeEmail')
+        mensaje.textContent = 'El campo debe estar relleno'
 
-    if (email.value.trim() == "") {
-        alert('[ERROR] El campo Email debe de estar relleno');
+        setTimeout( function(){
+            mensaje.textContent = ''
+        }, 2500)
         return false;
     }
     
-    tamano = document.getElementsByName("tamano");
+    let tamano = document.getElementsByName("tamano");
     var seleccionado = false;
     for(var i=0; i<tamano.length; i++) {
         if(tamano[i].checked) {
             seleccionado = true;
+            tamano = tamano[i].value
             break;
         }
     }
 
     if(!seleccionado) {
-        alert('[ERROR] Debe seleccionar un tamaño de pizza');
+        let mensaje = document.getElementById('mensajeTamano')
+        mensaje.textContent = 'Debe seleccionar un tamaño de pizza'
+
+        setTimeout( function(){
+            mensaje.textContent = ''
+        }, 2500)
         return false;
     }
 
     ingredientes = document.getElementsByName("ingredientes");
     var marcado = false;
     var precioIngredientes = 0
+    totalIngredientes = []
     for(var i=0; i<ingredientes.length; i++) {
         while(ingredientes[i].checked) {
             marcado = true;
             precioIngredientes ++
+            totalIngredientes.push(ingredientes[i].value)
             break;
         }
     }
 
     if (!marcado) {
-        alert('[ERROR] Debes elegir al menos 1 ingrediente');
+        let mensaje = document.getElementById('mensajeIngredientes')
+        mensaje.textContent = 'Debes elegir al menos 1 ingrediente'
+
+        setTimeout( function(){
+            mensaje.textContent = ''
+        }, 2500)
         return false;
     } 
 
@@ -66,8 +102,8 @@ function validacion() {
     var precio = precioTamano + precioIngredientes
 
     // Mostrar mensaje
-
-    alert("Tu pedido cuesta: " + precio + "€")
+    
+    alert("Gracias!! "+ nCliente +"\n Tu pedido: " + "\n Pizza: " + tamano + "\n Ingredientes: " + totalIngredientes + "\n Total: " + precio + "€")
     return true;
 }
 

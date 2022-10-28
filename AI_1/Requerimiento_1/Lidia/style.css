@@ -2,7 +2,8 @@
 .titulo{
     font-size: 1.875rem;
     font-weight: 800;
-    color: blueviolet;
+    color: rgb(193, 28, 222);
+    text-transform: uppercase;
 }
 
 .subtitulo{
