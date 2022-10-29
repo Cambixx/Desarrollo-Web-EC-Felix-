@@ -1,5 +1,4 @@
-/*       GENERALES       */
-
+/* Estilos para presentar el formulario de una forma más atractiva */
 
 label{
     margin-bottom: 1rem;
@@ -12,8 +11,6 @@ label{
     color: #bb0e0e;
     font-size: 0.875rem;
 }
-
-/*       FORMULARIO       */
 
 .form-title {
 	font-size: 2em;
@@ -42,9 +39,7 @@ form,
 	margin-bottom: .5em;
 }
 
-.contenedor-form input,
-.contenedor-form select,
-.contenedor-form textarea {
+.contenedor-form input{
 	padding: .8em;
 	margin-bottom: 1em;
 	border-radius: .3em;
