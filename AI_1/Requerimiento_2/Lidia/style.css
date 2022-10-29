@@ -9,7 +9,7 @@ label{
 }
 
 .mensaje-error{
-    color: rgb(c);
+    color: #bb0e0e;
     font-size: 0.875rem;
 }
 
@@ -74,4 +74,9 @@ form,
 	font-weight: bold;
 	font-size: 1.1em;
 	cursor: pointer;
+	margin-top: 2rem;
+}
+
+.boton-enviar:hover {
+	background-color: #770a0a;
 }
