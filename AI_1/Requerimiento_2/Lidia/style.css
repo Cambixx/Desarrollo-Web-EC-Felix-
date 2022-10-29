@@ -1,8 +1,5 @@
-h1{
-    text-align: center;
-    color: rgb(193, 28, 222);
-    text-transform: uppercase;
-}
+/*       GENERALES       */
+
 
 label{
     margin-bottom: 1rem;
@@ -12,6 +9,69 @@ label{
 }
 
 .mensaje-error{
-    color: rgb(212, 3, 3);
+    color: rgb(c);
     font-size: 0.875rem;
+}
+
+/*       FORMULARIO       */
+
+.form-title {
+	font-size: 2em;
+	text-align: center;
+    color: #bb0e0e;
+    text-transform: uppercase;
+}
+
+.contenedor-form {
+	display: flex;
+	width: 80%;
+	padding: 1.875rem;
+	margin: 1.875rem auto;
+	border-radius: 0.3125rem;
+    border: 2px solid #bb0e0e;
+}
+
+form,
+.form-img {
+	width: 47%;
+	margin: 0 2rem;
+}
+
+.contenedor-form label {
+	font-size: 1.2em;
+	margin-bottom: .5em;
+}
+
+.contenedor-form input,
+.contenedor-form select,
+.contenedor-form textarea {
+	padding: .8em;
+	margin-bottom: 1em;
+	border-radius: .3em;
+	border: 1px solid #252525;
+	box-sizing: border-box;
+}
+
+.datos-contacto input{
+    width: 100%;
+}
+
+.datos-contacto label{
+    display: block;
+}
+
+.enviar-mensaje {
+	width: 100%;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+.boton-enviar {
+	width: 49% !important;
+	background-color: #bb0e0e;
+	color: white;
+	font-weight: bold;
+	font-size: 1.1em;
+	cursor: pointer;
 }
