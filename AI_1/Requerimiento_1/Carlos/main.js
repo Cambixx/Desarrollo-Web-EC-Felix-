@@ -48,6 +48,8 @@ function creaH3(nodo, titulo) {
  * Función que recibe dos parámetros y la vamos a usar para crear etiquetas de tipo 'span'
  * @param 'nodo' Es el nodo al cual le vamos a añadir el título
  * @param 'texto'Es texto que queremos crear 
+ * Luego con 'textContent' le gregamos el texto pasado por parámetro
+ * Añadimos el texto (span) como hijo al nodo pasado por parámetro con 'appendChild'
  */
 function creaSpan(nodo, texto) {
   let span = document.createElement('span')
