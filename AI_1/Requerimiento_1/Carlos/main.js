@@ -19,7 +19,7 @@ let formulario = document.createElement('form')
  *  
  * @param 'nodo' Es el nodo al cual le vamos a añadir el título
  * @param 'titulo' Es el Título que vamos a dar 
- * La función crea una variable 'h1' donde creamos un nodo de tipo 'h1'
+ * La función crea una variable llamada 'h1' donde creamos un nodo de tipo 'h1'
  * Luego con 'textContent' le gregamos el título pasado por parámetro
  * Añadimos el título (h1) como hijo al nodo pasado por parámetro con 'appendChild'
  */
@@ -34,7 +34,7 @@ function creaH1(nodo, titulo) {
  * 
  * @param 'nodo' Es el nodo al cual le vamos a añadir el título
  * @param 'texto' Es título que queremos crear
- * La función crea una variable 'h3' donde creamos un nodo de tipo 'h3'
+ * La función crea una variable llamada 'h3' donde creamos un nodo de tipo 'h3'
  * Luego con 'textContent' le gregamos el texto pasado por parámetro
  * Añadimos el título (h3) como hijo al nodo pasado por parámetro con 'appendChild'
  */
@@ -48,6 +48,7 @@ function creaH3(nodo, titulo) {
  * Función que recibe dos parámetros y la vamos a usar para crear etiquetas de tipo 'span'
  * @param 'nodo' Es el nodo al cual le vamos a añadir el título
  * @param 'texto'Es texto que queremos crear 
+ * La función crea una variable llamada 'span' donde creamos un nodo de tipo 'h3'
  * Luego con 'textContent' le gregamos el texto pasado por parámetro
  * Añadimos el texto (span) como hijo al nodo pasado por parámetro con 'appendChild'
  */
@@ -57,6 +58,15 @@ function creaSpan(nodo, texto) {
   nodo.appendChild(span)
 }
 
+/**
+ * Función que recibe dos parámetros y la vamos a usar para crear etiquetas de tipo 'input'
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el título
+ * @param 'título' Es título que queremos dar al input
+ * La función crea un titulo h3 con el uso de la función creada anteriormente 'creaH3'
+ * y se añade como hijo al nodo pasado por parámetro
+ * Creamos una variable llamada 'input' donde creamos un nodo de tipo 'input'
+ * Añadimos el input como hijo al nodo pasado por parámetro con 'appendChild'
+ */
 function creaInput(nodo, titulo) {
   creaH3(formulario, titulo)
   let input = document.createElement('input')
