@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimiento 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="form-title">Pedir una pizza</h1>
+
+    <section class="contenedor-form">
+        <!-- Aquí empieza el formulario. En "action" le pasamos "#" para que se mantenga en la misma página, 
+            ya que no hemos creado una página diferente para mostrar el resultado del formulario. -->
+        <form id="formulario" action="#">
+            <!-- Hemos dividido en divs las distintas partes del formulario, para poder maquetarlo visualmente y 
+                para que a la hora de inspeccionar en el navegador estuviera todo más ordenado, pero esto no afecta 
+                al funcionamiento del formulario.-->
+            <div class="datos-contacto">
+
+                <h2 for="ingredientes">Datos de contacto:</h2>
+                <!-- Cada input se relaciona con su label a través de "for" e "id" -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre"><br>
+                <!-- Hemos añadido un mensaje que se mostrará unos segundos cuando se intente mandar el formulario sin rellenar un campo.
+                     Este comportamiento se podría haber hecho con un "required", pero hemos querido hacerlo por javascrip y así
+                     personalizar el mensaje en cada input. -->
+                <span class="mensaje-error" id="mensajeNombre"></span>
+
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Dirección"><br>
+                <span class="mensaje-error" id="mensajeDireccion"></span>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono"><br>
+                <span class="mensaje-error" id="mensajeTelefono"></span>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Email"><br>
+                <span class="mensaje-error" id="mensajeEmail"></span>
+            </div>
+
+            <div>
+                <h2 for="tamano">Tamaño pizza:</h2>
+
+                <input type="radio" value="pequeña" name="tamano" id="tamaño_pequeña">
+                <label for="tamaño_pequeña">Pequeña</label>
+
+                <input type="radio" value="mediana" name="tamano" id="tamaño_mediana">
+                <label for="tamaño_mediana">Mediana</label>
+
+                <input type="radio" value="grande" name="tamano" id="tamaño_grande">
+                <label for="tamaño_grande">Grande</label>
+                <br>
+                <span class="mensaje-error" id="mensajeTamano"></span>
+            </div>
+
+            <div>
+                <h2 for="ingredientes">Ingredientes:</h2>
+
+                <input type="checkbox" id="ingrediente1" name="ingredientes" value="Queso">
+                <label for="ingrediente1">Queso</label>
+
+                <input type="checkbox" id="ingrediente2" name="ingredientes" value="Oregano">
+                <label for="ingrediente2">Orégano</label>
+
+                <input type="checkbox" id="ingrediente3" name="ingredientes" value="Tomate">
+                <label for="ingrediente3">Tomate</label>
+
+                <input type="checkbox" id="ingrediente4" name="ingredientes" value="Champiñones">
+                <label for="ingrediente4">Champiñones</label>
+
+                <input type="checkbox" id="ingrediente5" name="ingredientes" value="Bacon">
+                <label for="ingrediente5">Bacon</label>
+
+                <input type="checkbox" id="ingrediente6" name="ingredientes" value="Piña">
+                <label for="ingrediente6">Piña</label>
+                <br>
+                <span class="mensaje-error" id="mensajeIngredientes"></span>
+            </div>
+
+            <div class="enviar-mensaje">
+                <input type="submit" class="boton-enviar" value="Pedir pizza">
+            </div>
+
+        </form>
+
+        <div class="form-img">
+            <img src="imagenes/pizza-happy.png" alt="Contacta con nosotros">
+        </div>
+
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
