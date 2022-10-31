@@ -60,7 +60,7 @@ function creaSpan(nodo, texto) {
 
 /**
  * Función que recibe dos parámetros y la vamos a usar para crear etiquetas de tipo 'input'
- * @param 'nodo' Es el nodo al cual le vamos a añadir el título
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el input
  * @param 'título' Es título que queremos dar al input
  * La función crea un titulo h3 con el uso de la función creada anteriormente 'creaH3'
  * y se añade como hijo al nodo pasado por parámetro
@@ -73,11 +73,33 @@ function creaInput(nodo, titulo) {
   nodo.appendChild(input)
 }
 
+/**
+ * Función que recibe un parámetros y la vamos a usar para crear etiquetas de tipo 'br'
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el salto de línea
+ * 
+ * Creamos una variable llamada 'salto' donde creamos un nodo de tipo 'br'
+ * Añadimos el br como hijo al nodo pasado por parámetro con 'appendChild'
+ */
 function creaSalto(nodo) {
   let salto = document.createElement('br')
   nodo.appendChild(salto)
 }
 
+/**
+ * Función que recibe tres parámetros y la vamos a usar para crear etiquetas de tipo 'input' 
+ * de tipo radio
+ * 
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el radio button
+ * @param 'name' es el valor del atributo name del radio button que vamos a crear
+ * @param 'texto' El texto que va a tener al lado el radio button
+ * 
+ * Creamos una variable llamada 'radioB' donde creamos un nodo de tipo 'input'
+ * A esa variable le cambiamos el tipo a 'radio' con 'type'
+ * Asignamos al atributo 'name' el valor que se le ha pasado a función por parámetro
+ * Añadimos el radio button como hijo al nodo pasado por parámetro con 'appendChild'
+ * usamos las funciones creaSpan y creaSalto para asignar el texto y dar un salto de 
+ * línea respectivamente.
+ */
 function creaRadioButton(nodo, name, texto) {
   let radioB = document.createElement('input')
   radioB.type = 'radio'
@@ -87,6 +109,18 @@ function creaRadioButton(nodo, name, texto) {
   creaSalto(nodo)
 }
 
+/**
+ * Función que recibe dos parámetros y la vamos a usar para crear etiquetas de tipo 'input' 
+ * de tipo checkbox
+ * 
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el check
+ * @param 'texto' El texto que va a tener al lado el check 
+ * Creamos una variable llamada 'chekB' donde creamos un nodo de tipo 'input'
+ * A esa variable le cambiamos el tipo a 'checkbox' con 'type'
+ * Añadimos el checkbox como hijo al nodo pasado por parámetro con 'appendChild'
+ * usamos las funciones creaSpan y creaSalto para asignar el texto y dar un salto de 
+ * línea respectivamente.
+ */
 function creaCheck(nodo, texto) {
   let checkB = document.createElement('input')
   checkB.type = 'checkbox'
@@ -95,6 +129,33 @@ function creaCheck(nodo, texto) {
   creaSalto(nodo)
 }
 
+/**
+ * Función que recibe tres parámetros y la vamos a usar para crear etiquetas de tipo 'textArea'
+ * 
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el textArea 
+ * @param 'título' Es título que queremos dar al textArea
+ * @param 'textoInterno' Es el texto que va a tener el placeHolder del textArea
+ * Llama a la función creaH3 que se encarga de recibir los parámetros nodo y título
+ * Creamos una variable llamada 'textArea' donde creamos un nodo de tipo 'textArea'
+ * A esa variable le modificamos el placeHolder pasandole el valor del parámetro recibido por 
+ * la función
+ * Modificamos tambien el número de columnas y filas
+ * Añadimos el textArea como hijo al nodo pasado por parámetro con 'appendChild'
+ */
+ function creaTextArea(nodo, titulo, textoInterno) {
+  creaH3(nodo, titulo)
+  let textArea = document.createElement('textarea')
+  textArea.placeholder = textoInterno
+  textArea.cols = 30
+  textArea.rows = 10
+  nodo.appendChild(textArea)
+}
+
+/**
+ * Función sin parámetros que vamos a usar para agregar los inputs que necesitamos
+ * Llama a la función creaInput que se encarga de recibir los parámetros 
+ * que necesitamos 
+ */
 function agregaInputs() {
   creaInput(formulario, 'DNI')
   creaInput(formulario, 'Nombre')
@@ -103,6 +164,11 @@ function agregaInputs() {
   creaInput(formulario, 'Teléfono')
 }
 
+/**
+ * Función sin parámetros que crea un título h3 y agrega los radio button que necesitamos
+ * Llama a funciones creaH3 y creaRadioButton que se encargan de recibir los parámetros
+ * en funcion de las necesidades
+ */
 function agregaRadio1() {
   creaH3(formulario, 'Cuantas veces te lavas las manos')
   creaRadioButton(formulario, 'lavar', '1 vez al día')
@@ -112,6 +178,11 @@ function agregaRadio1() {
   creaRadioButton(formulario, 'lavar', 'Nunca me lavo las manos')
 }
 
+/**
+ * Función sin parámetros que crea un título h3 y agrega los radio button que necesitamos
+ * Llama a funciones creaH3 y creaRadioButton que se encargan de recibir los parámetros
+ * en funcion de las necesidades
+ */
 function agregaRadio2() {
   creaH3(formulario, 'Elige la mejor de las siguientes películas')
   creaRadioButton(formulario, 'peliculas', 'Chucky')
@@ -121,6 +192,11 @@ function agregaRadio2() {
   creaRadioButton(formulario, 'peliculas', 'El padrino')
 }
 
+/**
+ * Función sin parámetros que crea un título h3 y agrega los checkbox que necesitamos
+ * Llama a funciones creaH3 y creaRadioButton que se encargan de recibir los parámetros
+ * en funcion de las necesidades
+ */
 function agregaCheck() {
   creaH3(formulario, 'De los siguientes deportes, elige tus favoritos')
   creaCheck(formulario, 'Golf')
@@ -130,6 +206,17 @@ function agregaCheck() {
   creaCheck(formulario, 'Ninguno')
 }
 
+/**
+ * Función que recibe tres parámetros y la vamos a usar para agregar etiquetas de tipo 'img'
+ *  
+ * @param 'nodo' Es el nodo al cual le vamos a añadir la imagen
+ * @param 'título' Es título que queremos dar a la imagen
+ * @param 'url' El la ruta donde va a estar guardada la imagen
+ * Llama a la función creaH3 que se encarga de recibir los parámetros 'nodo' y 'título'
+ * Creamos una variable llamada 'imagen' donde creamos un nodo de tipo 'img'
+ * Cambiamos el atributo 'src' y le pasamos la url pasada por parámetro
+ * Añadimos la imagen como hijo al nodo pasado por parámetro con 'appendChild'
+ */
 function agregaImagen(nodo, titulo, url) {
   creaH3(nodo, titulo)
   let imagen = document.createElement('img')
@@ -137,6 +224,20 @@ function agregaImagen(nodo, titulo, url) {
   nodo.appendChild(imagen)
 }
 
+/**
+ * Función que recibe tres parámetros y la vamos a usar para agregar etiquetas de tipo 'select'
+ * 
+ * @param 'nodo' Es el nodo al cual le vamos a añadir el select 
+ * @param 'título' Es título que queremos dar al select 
+ * @param 'opciones' Es un array con las opciones del select
+ * Llama a la función creaH3 que se encarga de recibir los parámetros 'nodo' y 'título'
+ * Creamos una variable llamada 'select' donde creamos un nodo de tipo 'select'
+ * Hacemos un bucle for que va recorrer el array 'opciones' pasado por parámetros y por cada 
+ * posición (opción) del array se crea una variable llamada 'opción' que crea un elemento
+ * 'option',luego con 'textContent', a ese elemento option le agregamos el contenido del array 'opciones'
+ * en esa posición, luego añadimos la opción como hijo al select con 'appendChild'
+ * Añadimos el select como hijo al nodo pasado por parámetro con 'appendChild'
+ */
 function creaSelect(nodo, titulo, opciones) {
   creaH3(nodo, titulo)
   let select = document.createElement('select')
@@ -148,16 +249,22 @@ function creaSelect(nodo, titulo, opciones) {
   nodo.appendChild(select)
 }
 
-function creaTextArea(nodo, titulo, textoInterno) {
-  creaH3(nodo, titulo)
-  let textArea = document.createElement('textarea')
-  textArea.placeholder = textoInterno
-  textArea.cols = 30
-  textArea.rows = 10
-  nodo.appendChild(textArea)
-}
-
-
+/**
+ * Al contenedor (div inicial que está en el HTML) le añadimos el formulario
+ * Creamos un título H1 con el uso de la función creaH1
+ * Agregamos los inputs llamando a la función agregaInputs()
+ * Agregamos los primeros radio buttons llamando a la función agregaRadio1()
+ * Agregamos los segundos radio buttons llamando a la función agregaRadio2()
+ * Agregamos los checkbox llamando a la función agregaCheck()
+ * Agregamos una imagen llamando a la función agregaImagen que recibe por parámetros
+ * el formulario, un título y una url que contendrá la imagen que se va a mostrar y de
+ * igual manera para agregar la segunda imagen.
+ * Creamos un array llamado 'opciones' que contiene las opciones segun la necesidad
+ * Agregamos el select llamando a la función creaSelect() que recibe por parámetros el
+ * formulario, el título y el array 'opciones' 
+ * Agregamos el textArea llamando a la función creaTextArea() que recibe por parámetros
+ * el formulario, el título y el placehoder que va a contener el mismo
+ */
 contenedor.append(formulario)
 creaH1(formulario, 'Título')
 agregaInputs()
