@@ -55,15 +55,16 @@ form,
     display: block;
 }
 
-.enviar-mensaje {
+.botones {
 	width: 100%;
-	display: block;
+	display: flex;
+	justify-content: space-between;
 	margin: auto;
 	text-align: center;
 }
 
 .boton-enviar {
-	width: 49% !important;
+	width: 45% !important;
 	background-color: #bb0e0e;
 	color: white;
 	font-weight: bold;
@@ -74,4 +75,20 @@ form,
 
 .boton-enviar:hover {
 	background-color: #770a0a;
+}
+
+.boton-actualizar {
+	width: 45% !important;
+	background-color: transparent;
+	color: #bb0e0e;
+	border: 1px solid #bb0e0e;
+	font-weight: bold;
+	font-size: 1.1em;
+	cursor: pointer;
+	margin-top: 2rem;
+}
+
+.boton-actualizar:hover {
+	background-color: #bb0e0e;
+	color: white;
 }

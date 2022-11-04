@@ -11,7 +11,7 @@
 
 <body>
     <h1 class="form-title">Pedir una pizza</h1>
-
+    
     <section class="contenedor-form">
         <!-- Aquí empieza el formulario. En "action" le pasamos "#" para que se mantenga en la misma página, 
             ya que no hemos creado una página diferente para mostrar el resultado del formulario. -->
@@ -43,46 +43,18 @@
                 <span class="mensaje-error" id="mensajeEmail"></span>
             </div>
 
-            <div>
-                <h2>Tamaño pizza:</h2>
+            <div class="tamanos-pizzas">
 
-                <input type="radio" value="pequeña" name="tamano" id="tamaño_pequeña">
-                <label for="tamaño_pequeña">Pequeña</label>
-
-                <input type="radio" value="mediana" name="tamano" id="tamaño_mediana">
-                <label for="tamaño_mediana">Mediana</label>
-
-                <input type="radio" value="grande" name="tamano" id="tamaño_grande">
-                <label for="tamaño_grande">Grande</label>
-                <br>
-                <span class="mensaje-error" id="mensajeTamano"></span>
             </div>
 
-            <div>
-                <h2>Ingredientes:</h2>
+            <div class="ingredientes-pizza">
 
-                <input type="checkbox" id="ingrediente1" name="ingredientes" value="Queso">
-                <label for="ingrediente1">Queso</label>
-
-                <input type="checkbox" id="ingrediente2" name="ingredientes" value="Oregano">
-                <label for="ingrediente2">Orégano</label>
-
-                <input type="checkbox" id="ingrediente3" name="ingredientes" value="Tomate">
-                <label for="ingrediente3">Tomate</label>
-
-                <input type="checkbox" id="ingrediente4" name="ingredientes" value="Champiñones">
-                <label for="ingrediente4">Champiñones</label>
-
-                <input type="checkbox" id="ingrediente5" name="ingredientes" value="Bacon">
-                <label for="ingrediente5">Bacon</label>
-
-                <input type="checkbox" id="ingrediente6" name="ingredientes" value="Piña">
-                <label for="ingrediente6">Piña</label>
-                <br>
-                <span class="mensaje-error" id="mensajeIngredientes"></span>
             </div>
 
-            <div class="enviar-mensaje">
+
+            <div class="botones">
+                <input type="button" class="boton-actualizar" id="btnBuscarAsincrono" value="Sincronizar"></input>
+
                 <input type="submit" class="boton-enviar" value="Pedir pizza">
             </div>
 
@@ -91,9 +63,10 @@
         <div class="form-img">
             <img src="imagenes/pizza-happy.png" alt="Contacta con nosotros">
         </div>
+        
 
     </section>
-
+    
     <script src="main.js"></script>
 </body>
 
