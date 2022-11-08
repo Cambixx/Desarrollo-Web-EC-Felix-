@@ -21,6 +21,13 @@
                 "ID": "tamaño_grande",
                 "TITULO": "Grande",
                 "PRECIO": 15
+            },
+            {
+                "VALOR": "super",
+                "NAME": "tamano",
+                "ID": "tamaño_super",
+                "TITULO": "Super",
+                "PRECIO": 20
             }
         ],
         "INGREDIENTES": [
