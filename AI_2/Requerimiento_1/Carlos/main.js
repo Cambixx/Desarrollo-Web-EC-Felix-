@@ -112,32 +112,9 @@ function cargarIngredientes(jsonDoc) {
     creaMensaje(ingredientes, "mensajeIngredientes")
 }
 
-
-
-
-
-
-
 /* Creamos una función para validar todos los datos del formulario antes de mandarlo */
 
 function validacion() {
-
-    function peticionDatosPrecio(){
-        let xmlHttp = new XMLHttpRequest()
-        xmlHttp.open('GET', URL_DESTINO + RECURSO, true)//Asincrono
-        xmlHttp.send() //podemos poner null o no, es lo mismo
-    
-        //esta funcion de callback se ejecutara cuando se haya procesado la respueta HTTP
-        xmlHttp.onload = function(){
-            pTamano(this.responseText)
-            
-        }
-    
-        xmlHttp.onerror = function(){
-            alert("ERROR!!")
-        }
-    
-    }
 
     /* Declaramos una variable "nCliente" para almacenar el nombre que nos pase y luego poder personalizar el mensaje que mostraremos al mandar el formulario. */
     let nCliente
@@ -253,31 +230,18 @@ function validacion() {
     /* Declaramos la variable "precioTamano" y la iniciamos a 0. A continuación, con un bucle recogeremos la opción que ha sido seleccionada para asignarle a la variable el precio,
        dependiendo del tamaño*/
 
-    // var precioTamano = 0
-
-    // if (document.getElementById("tamaño_pequeña").checked) {
-    //     precioTamano = 5
-    // } else if (document.getElementById("tamaño_mediana").checked) {
-    //     precioTamano = 10
-    // } else if (document.getElementById("tamaño_grande").checked) {
-    //     precioTamano = 15
-    // }
-    
     var precioTamano = 0
-    function pTamano(jsonDoc) {
-        var objetoJson = JSON.parse(jsonDoc)
-        var arrayTamanos = objetoJson.CATALOG.TAMANOS;
-        
 
-        for (let i = 0; i < arrayTamanos.length; i++) {
-            let idTamano = arrayTamanos[i].ID
-            if (document.getElementById(idTamano).checked) precioTamano = arrayTamanos[i].PRECIO
-            
-        }
-        //arrayTamanos[0].ID
-        
+    if (document.getElementById("tamaño_pequeña").checked) {
+        precioTamano = 5
+    } else if (document.getElementById("tamaño_mediana").checked) {
+        precioTamano = 10
+    } else if (document.getElementById("tamaño_grande").checked) {
+        precioTamano = 15
     }
-    peticionDatosPrecio()
+    
+    
+    
     /* Declaramos la variable "precio" que recibirá la suma de lo almacenado en las variables "precioTamano" y "precioIngredientes". */
     var precio = precioTamano + precioIngredientes
 
