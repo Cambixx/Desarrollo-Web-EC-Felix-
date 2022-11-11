@@ -4,6 +4,7 @@ const URL_DESTINO = "http://localhost:5500/AI_2/Requerimiento_1/Carlos/"
 const RECURSO = "menu.json"
 
 
+
 function peticionDatos(){
     let xmlHttp = new XMLHttpRequest()
     xmlHttp.open('GET', URL_DESTINO + RECURSO, true)
