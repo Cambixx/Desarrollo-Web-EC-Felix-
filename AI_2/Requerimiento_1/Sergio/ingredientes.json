@@ -1,0 +1,26 @@
+{
+    "PIZZA": {
+        "INGREDIENTES": [
+            {
+                "INGREDIENTE": "Jamon",               
+                "PRECIO": 4 
+            },
+            {
+                "INGREDIENTE": "Queso",
+                "PRECIO": 1
+            },
+            {
+                "INGREDIENTE": "Anchoa",
+                "PRECIO": 4
+            },
+            {
+                "INGREDIENTE": "Bacon",
+                "PRECIO": 3
+            },
+            {
+                "INGREDIENTE": "Cebolla",
+                "PRECIO": 1
+            }
+        ]
+    }
+}
