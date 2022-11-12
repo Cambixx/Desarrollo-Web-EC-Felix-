@@ -1,4 +1,4 @@
-const URL_DESTINO = "http://localhost:5500/WsJavaScript/0000pruebas/"
+const URL_DESTINO = "http://localhost:5500/AI_2/Requerimiento_1/Sergio/"
 const RECURSO1 = "tamaños.json"
 const RECURSO2 = "ingredientes.json"
 
