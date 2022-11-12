@@ -1,0 +1,99 @@
+{
+    "CATALOG": {
+        "TAMANOS": [
+            {
+                "VALOR": "pequeña",
+                "NAME": "tamano",
+                "ID": "tamaño_pequeña",
+                "TITULO": "Pequeña",
+                "PRECIO": 5
+            },
+            {
+                "VALOR": "mediana",
+                "NAME": "tamano",
+                "ID": "tamaño_mediana",
+                "TITULO": "Mediana",
+                "PRECIO": 10
+            },
+            {
+                "VALOR": "grande",
+                "NAME": "tamano",
+                "ID": "tamaño_grande",
+                "TITULO": "Grande",
+                "PRECIO": 15
+            },
+            {
+                "VALOR": "super",
+                "NAME": "tamano",
+                "ID": "tamaño_super",
+                "TITULO": "Super",
+                "PRECIO": 20
+            }
+        ],
+        "INGREDIENTES": [
+            {
+                "VALOR": "Queso",
+                "NAME": "ingredientes",
+                "ID": "ingrediente1",
+                "TITULO": "Queso",
+                "PRECIO": 1
+            },
+            {
+                "VALOR": "Orégano",
+                "NAME": "ingredientes",
+                "ID": "ingrediente2",
+                "TITULO": "Orégano",
+                "PRECIO": 0.5
+            },
+            {
+                "VALOR": "Tomate",
+                "NAME": "ingredientes",
+                "ID": "ingrediente3",
+                "TITULO": "Tomate",
+                "PRECIO": 1
+            },
+            {
+                "VALOR": "Champiñones",
+                "NAME": "ingredientes",
+                "ID": "ingrediente4",
+                "TITULO": "Champiñones",
+                "PRECIO": 1.5
+            },
+            {
+                "VALOR": "Piña",
+                "NAME": "ingredientes",
+                "ID": "ingrediente6",
+                "TITULO": "Piña",
+                "PRECIO": 1
+            },
+            {
+                "VALOR": "Jamón",
+                "NAME": "ingredientes",
+                "ID": "ingrediente7",
+                "TITULO": "Jamón",
+                "PRECIO": 2
+            },
+            {
+                "VALOR": "Espinacas",
+                "NAME": "ingredientes",
+                "ID": "ingrediente8",
+                "TITULO": "Espinacas",
+                "PRECIO": 0.5
+            },
+            {
+                "VALOR": "Pimientos",
+                "NAME": "ingredientes",
+                "ID": "ingrediente9",
+                "TITULO": "Pimientos",
+                "PRECIO": 0.75
+            },
+            {
+                "VALOR": "Huevo",
+                "NAME": "ingredientes",
+                "ID": "ingrediente10",
+                "TITULO": "Huevo",
+                "PRECIO": 1
+            }
+        ]
+    }
+}
