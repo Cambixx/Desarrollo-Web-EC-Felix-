@@ -5,39 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body >
-    <form action="" >
-        <fieldset id="formulario" action="#">
-            <legend>Pizeriiiiia</legend>
+
+    <h1 class="form-title">Pedir una pizza</h1>
+    <section class="contenedor-form">
+        <form action="" id="formulario1" action="#">
+       
+            <div class="datos-contacto">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre">
+            <input type="text" name="nombre" id="nombre" >
+            <br><br>
             <label for="apellido">Apellido</label>
-            <input type="text" name="apellido">
+            <input type="text" name="apellido" id="apellido">
             <br><br>
             <label for="direccion">Direccion</label>
-            <input type="text" name="direccion">
+            <input type="text" name="direccion" id="direccion">
             <br><br>
             <label for="telefono">Teléfono</label>
-            <input type="text" name="telefono">
+            <input type="text" name="telefono" id="telefono">
             <br><br>
             <label for="email">Email</label>
-            <input type="mail" name="email">
+            <input type="mail" name="email" id="email">
             <br><br>
-          
-            <input type="button" id="tam" value="VER TAMAÑOS">
-            <input type="button" id="ingre" value="VER INGREDIENTES">
-
+            </div>
+            
+            
+            <input type="button" id="tam"  value="VER TAMAÑOS">
+            <input type="button" id="ingre"  value="VER INGREDIENTES">
+            <input type="button" id="sincronizar" class="boton-actualizar" value="REFRESCAR" onclick="location. reload()">
             <br><br>
             <div id="resultadoBusqueda"></div>
             
             <div id="resultadoBusqueda2"></div>
-            <br><br>
-            <input type="submit">
-            <input type="reset">
-        </fieldset>
-    </form>
+            
+            <input type="submit" class="boton-enviar">
+            <input type="reset" class="boton-enviar">
+        
+        </form>
+        <div class="form-img">
+            <img src="imagenes/pizza-happy.png" alt="Contacta con nosotros">
+        </div>
+
+    </section>
+    
     
     
     
