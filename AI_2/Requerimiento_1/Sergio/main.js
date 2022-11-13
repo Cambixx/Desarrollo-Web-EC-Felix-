@@ -192,7 +192,7 @@ const RECURSO2 = "ingredientes.json"
         
 
         var precioTotal = precioIngredientes + precioTamaño
-        alert("PRECIO TOTAL " + "\n\ " + precioTotal + " \n\ "+ " GRACIAS REALIZAR SU PEDIDO")
+        alert("PRECIO TOTAL " + "\n\ " + precioTotal + " \n\ "+ " GRACIAS POR REALIZAR SU PEDIDO")
         return true
 
         
