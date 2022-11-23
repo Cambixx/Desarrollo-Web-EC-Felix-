@@ -1,0 +1,40 @@
+
+<h1 *ngIf="mostrarUsuario">Bienvenid@ {{usuario}}</h1>
+
+<div class="login" *ngIf="mostrarLogin">
+  
+  <h1>Acceder a mi Cuenta</h1>
+  <h3>Nombre de Usuario</h3>
+  <input type="text" placeholder="Usuario" [(ngModel)]="usuario">
+  <h3>Contraseña</h3>
+  <input type="text" placeholder="Contraseña" [(ngModel)]="contrasena">
+  <button (click)="login(usuario, contrasena)">Entrar</button>
+  <p *ngIf="mostrarMensaje" class="mensaje">Usuario y/o contraseña no validos</p>
+
+</div>
+
+<div class="lista" *ngIf="mostrarLista">
+  
+  <h2>Lista de videojuegos</h2>
+    
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Valoración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let juego of listaVJ">
+        <td>{{juego.id}}</td>
+        <td>{{juego.titulo}}</td>
+        <td>{{juego.vMedia}}</td>
+        <td><a [routerLink]="['/detalle']" [queryParams]="{id:juego.id, titulo:juego.titulo, compania:juego.compania, idImagen:juego.idImagen, vMedia:juego.vMedia}">Detalle</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="cerrarSesion()">Cerrar Sesión</button>
+</div>
+
