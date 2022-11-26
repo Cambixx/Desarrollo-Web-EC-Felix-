@@ -1,0 +1,22 @@
+
+
+
+<div>
+    <fieldset>
+        <h4 *ngIf="usuarioIncorrecto">{{texto}}</h4>
+        
+
+        <legend>INGRESA A TU CUENTA </legend>
+        <label>Nombre de usuario</label>
+        <br>
+        <input type="text"  [(ngModel)]="nombre">
+        <br><br>
+        <label>Password</label>
+        <br>
+        <input type="text" [(ngModel)]="contrasena" >
+        <button (click)="iniciarSesion(nombre, contrasena)">Login</button>
+
+    </fieldset>
+
+
+</div>

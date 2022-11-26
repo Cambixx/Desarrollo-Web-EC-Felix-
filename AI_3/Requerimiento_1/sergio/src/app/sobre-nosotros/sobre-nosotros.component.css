@@ -1,0 +1,23 @@
+img{
+    width: 100px;
+    height: 100px;
+    
+}
+.imagenes{
+    float: left;
+    display: flex;
+
+}
+.caja1{
+    display: flex;
+    
+}
+.caja2{
+    display: flex;
+}
+.caja3{
+    display: flex;
+}
+.caja4{
+    display: flex;
+}
