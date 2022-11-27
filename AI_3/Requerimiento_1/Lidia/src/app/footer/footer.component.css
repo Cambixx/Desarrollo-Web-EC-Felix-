@@ -1,0 +1,21 @@
+/*       Header       */
+
+footer{
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+    min-height: 5rem;
+    background-color: #4b1a69;
+}
+
+p{
+    padding: 0 6rem;
+}
+
+a{
+    color: #dcbdef;
+}
+
+a:hover{
+    color: #ffffff;
+}

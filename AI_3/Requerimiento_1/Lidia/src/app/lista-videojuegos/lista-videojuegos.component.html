@@ -1,0 +1,47 @@
+
+<main>
+
+  <div class="login contenedor-form" *ngIf="mostrarLogin">
+    <h1>Iniciar sesión</h1>
+
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" placeholder="Usuario" [(ngModel)]="username">
+      
+      <label for="password">Contraseña:</label>
+      <input type="text" id="password" name="password" placeholder="Contraseña" [(ngModel)]="password">
+
+      <a class="btn" (click)="login(username, password)">Entrar</a>
+      <p *ngIf="mostrarMensaje" class="mensaje-error">Usuario y/o contraseña no validos</p>
+      
+  </div>
+  <div class="lista" *ngIf="mostrarLista">
+    <p class="nombre-usuario" *ngIf="mostrarUsuario">Bienvenid@: {{username}}</p>
+
+    <h1 class="page-title">Top 10 de videojuegos</h1>
+    <section>
+        <table class="tabla-descuento">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Valoración</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let juego of listaVideoJuegos">
+                <td class="text-center">{{juego.id}}</td>
+                <td>{{juego.titulo}}</td>        
+                <td class="text-center">{{juego.valoracion}}</td>
+                <td class="text-center"><a [routerLink]="['/detalle']" [queryParams]="{ id:juego.id, titulo:juego.titulo, compania:juego.compania, imagen:juego.imagen, valoracion: juego.valoracion}"> Ver</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+  </div>
+
+
+
+</main>
+
+

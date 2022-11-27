@@ -1,0 +1,41 @@
+/* Header-nav */
+
+header {
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	background-color: rgba(162, 99, 225, 0.1);
+	padding: 0 6rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.header-logo {
+    font-size: 2rem;
+	color: rgb(56, 54, 54);
+	font-weight: bold;
+	margin: 1rem .0;
+	border: 2px solid #792fa7;
+	border-radius: 10em;
+	padding: 0.5rem 1rem;
+	background: white;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.nav-item {
+    display: block;
+    padding: 0 2em;
+}
+
+
