@@ -10,7 +10,7 @@ export class AboutUsComponent implements OnInit {
   imagen1= "/assets/img/ldiaz.png"
   imagen2= "/assets/img/foto-Carlos.jpg"
   imagen3= "/assets/img/smartinez.jpg"
-  imagen4= "/assets/img/"
+  imagen4= "/assets/img/Fotocarnet_LuciaPerez.jpg"
 
   integrante1 :String= "Lidia Díaz"
   integrante2 :String= "Carlos Rábago"
