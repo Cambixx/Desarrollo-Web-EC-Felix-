@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "SERGIO"
+  "defaultProject": "SERGIO",
+  "cli": {
+    "analytics": false
+  }
 }

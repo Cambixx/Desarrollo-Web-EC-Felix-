@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "AE-3-Videojuegos"
+  "defaultProject": "AE-3-Videojuegos",
+  "cli": {
+    "analytics": false
+  }
 }
