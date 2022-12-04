@@ -102,12 +102,5 @@
       }
     }
   },
-<<<<<<< HEAD:AI_3/Requerimiento_1/sergio/angular.json
-  "defaultProject": "SERGIO",
-  "cli": {
-    "analytics": false
-  }
-=======
   "defaultProject": "AE-3-Videojuegos"
->>>>>>> 58ddd6e0aeff85568edf1fcbaefcfca3d9f4d94d:AI_3/Requerimiento_2/angular.json
 }
