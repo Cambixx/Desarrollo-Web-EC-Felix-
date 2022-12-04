@@ -1,0 +1,118 @@
+/* Hay estilos que se rpiten en varios componentes, por eso los hemos puesto en la hoja de estilos
+principal y la hemos llamado desde cada componente */
+
+/* Estilos generales */
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+	color: #792fa7;
+}
+
+a:hover {
+	color: #4b1a69;
+}
+
+main{
+	display: flex;
+    flex-direction: column;
+	width: 90%;
+	min-height: 43rem;
+    margin: 0 auto 5rem;
+}
+
+/*       Login       */
+
+label{
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.mensaje-error{
+    color: #bb0e0e;
+    font-size: 0.875rem;
+}
+
+.contenedor-form {
+	width: 40%;
+}
+
+.contenedor-form input{
+    width: 100%;
+	padding: .8em;
+	margin-bottom: 1em;
+	border-radius: .3em;
+	border: 1px solid #252525;
+	box-sizing: border-box;
+}
+
+.btn {
+    display: block;
+	width: 20% !important;
+    padding: 0.5rem 0.5rem;
+	background-color: #792fa7;
+	color: white;
+	font-size: 1.1em;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 2rem;
+    border-radius: .3em;
+}
+
+.btn:hover {
+	background-color: #4b1a69;
+	color: white;
+}
+
+.nombre-usuario{
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #792fa7;
+}
+
+/*       Lista videojuegos       */
+
+.tabla{
+	border-collapse: collapse;
+	padding: 0.3125rem;
+	width: 100%;
+	display: block;
+	overflow-x: auto;
+}
+
+.tabla caption {
+	padding: 0.75rem;
+	font-size: 1.25rem;
+}
+
+.tabla th {
+	border: 1px solid #a263e1;
+	padding: 0.75rem;
+	background: rgba(162, 99, 225, 0.2)
+}
+
+.tabla .text-center {
+	text-align: center;
+}
+
+.tabla td {
+	border: 1px solid #a263e1;
+	padding: 0.75rem;
+	vertical-align: top;
+
+}
+
+

@@ -1,0 +1,52 @@
+<main>
+  <!-- La página de Login y el listado de juegos es la misma, con una función en el formulario, ocultamos el login al iniciar sesión -->
+  <div class="login contenedor-form" *ngIf="mostrarLogin">
+    <h1>Iniciar sesión</h1>
+
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" name="username" placeholder="Usuario" [(ngModel)]="username">
+      
+      <label for="password">Contraseña:</label>
+      <input type="text" id="password" name="password" placeholder="Contraseña" [(ngModel)]="password">
+
+      <a class="btn" (click)="login(username, password)">Entrar</a>
+      <!-- Este p está oculto, pero se muestra cuando el usuario o la contraseña son incorrectos -->
+      <p *ngIf="mostrarMensaje" class="mensaje-error">Usuario y/o contraseña no validos</p>
+      
+  </div>
+
+  <!-- Si se procesa el login, se mostrará la tabla de videojuegos, la bienvenida del usuario y el botón de cerrar sesión -->
+  <div class="lista" *ngIf="mostrarLista">
+    <p class="nombre-usuario" *ngIf="mostrarUsuario">Bienvenid@: {{username}}</p>
+    <h1 class="page-title">Top 10 de videojuegos</h1>
+    <section>
+        <table class="tabla">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Valoración</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Con ngFor generamos las filas de la tabla, completando su información con las variables a las que llamamos -->
+              <tr *ngFor="let juego of listaVideoJuegos">
+                <td class="text-center">{{juego.id}}</td>
+                <td>{{juego.titulo}}</td>        
+                <td class="text-center">{{juego.valoracion}}</td>
+                <!-- A través de la url pasaremos los parámetros necesarios de cada juego para poder mostrarlos en la pantalla de Detalle
+                Aquí hemos incluido también el nombre de usuario, para que no se pierda al cambair de ppágina -->
+                <td class="text-center"><a routerLink="/detalle" [queryParams]="{ id:juego.id, titulo:juego.titulo, compania:juego.compania, imagen:juego.imagen, valoracion: juego.valoracion, username}"> Ver</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Al ejecutar esta función, los valores vuelve a su estado original y se pide volver a iniciar sesión -->
+    <a class="btn" (click)="cerrarSesion()">Cerrar Sesión</a>
+  </div>
+
+</main>
+
+

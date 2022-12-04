@@ -1,0 +1,11 @@
+/*       Detalle juego       */
+
+.juego {
+	float: left;
+	width: 25%;
+	margin: 3rem 1rem;
+}
+
+.juego-img{
+    width: 100%;
+}

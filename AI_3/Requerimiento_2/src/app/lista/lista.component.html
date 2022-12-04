@@ -1,0 +1,27 @@
+<main>
+    <p class="nombre-usuario">Bienvenid@: {{username}}</p>
+
+    <h1 class="page-title">Top 10 de videojuegos</h1>
+    <section>
+        <table class="tabla">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Valoración</th>
+                <th>Detalles</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let juego of listaVideoJuegos">
+                <td class="text-center">{{juego.id}}</td>
+                <td>{{juego.titulo}}</td>        
+                <td class="text-center">{{juego.valoracion}}</td>
+                <td class="text-center"><a [routerLink]="['/detalle']" [queryParams]="{ id:juego.id, titulo:juego.titulo, compania:juego.compania, imagen:juego.imagen, valoracion: juego.valoracion, username}"> Ver</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+   <a class="btn" routerLink="/lista-videojuegos">Cerrar Sesión</a> 
+</main>
